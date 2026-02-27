@@ -2,7 +2,7 @@ import streamlit as st
 import random
 
 translations = {
-    "English": {
+    "English": 
         "welcome": "Anonymous, Multilingual Mental Health Support",
         "mood_question": "How are you feeling today?",
         "share": "Share what's on your mind...",
