@@ -174,7 +174,7 @@ st.markdown("""
         
 st.markdown("---")
 with st.sidebar:
-    st.image("assets/logo image.png", width=150)
+    st.image("assets/logo image.png", width=200)
     st.title("🌿 MindNest")
     st.markdown("### Anonymous Support System")
     st.write("Step-Based Mental Health Assistance")
