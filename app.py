@@ -30,7 +30,7 @@ translations = {
         "acute": "तातडीची परिस्थिती",
         "select_state": "तुमची सध्याची स्थिती निवडा:"
 }
-}
+
 
 st.set_page_config(page_title="MindNest", page_icon="🌿", layout = "wide")
 st.markdown("""
