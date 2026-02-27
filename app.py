@@ -25,7 +25,7 @@ translations = {
 st.set_page_config(page_title="MindNest", page_icon="🌿", layout = "wide")
 st.markdown("""
 <style>
-st.markdown("""
+
 /* ================================
    GLOBAL APP STYLING
 ================================ */
