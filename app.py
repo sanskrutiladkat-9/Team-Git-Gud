@@ -10,7 +10,7 @@ translations = {
         "moderate": "Moderate Distress",
         "severe": "Severe Distress",
         "acute": "Acute Crisis"
-    },
+    }
     "Hindi": {
         "welcome": "गोपनीय बहुभाषी मानसिक स्वास्थ्य सहायता",
         "mood_question": "आप आज कैसा महसूस कर रहे हैं?",
