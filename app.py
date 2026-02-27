@@ -174,7 +174,7 @@ st.markdown("""
         
 st.markdown("---")
 with st.sidebar:
-    st.image("https://drive.google.com/file/d/1Jyo6Yr66VcFplX5_CHjcxzw6TJ5Ljojt/view?usp=sharing", width=150)
+    st.image("st.image("https://drive.google.com/uc?export=view&id=1Jyo6Yr66VcFpIX5_CHjcxzw6TJ5LjojT", width=150)", width=150)
     st.title("🌿 MindNest")
     st.markdown("### Anonymous Support System")
     st.write("Step-Based Mental Health Assistance")
