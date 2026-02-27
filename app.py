@@ -120,7 +120,7 @@ with col1:
 with col2:
     mood2 = st.radio(
         " ",
-        [t["severe"], t["acute crisis"]]
+        [t["severe"], t["acute"]]
          )
 
 mood = mood if mood else mood2
