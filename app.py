@@ -4,11 +4,21 @@ import random
 st.set_page_config(page_title="MindNest", page_icon="🌿", layout = "wide")
 st.markdown("""
 <style>
+
+/* Full Page Background Gradient */
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #dbeafe, #f0fdf4);
+}
+
+/* Remove default dark background */
+[data-testid="stHeader"] {
+    background: rgba(0,0,0,0);
+}
 /* Banner Styling */
 .hero {
     background: linear-gradient(135deg, #4e73df, #1cc88a);
-    padding: 60px;
-    border-radius: 15px;
+    padding: 80px;
+    border-radius: 20px;
     text-align: center;
     color: white;
     margin-bottom: 30px;
@@ -23,11 +33,12 @@ st.markdown("""
 
 /* Card Styling */
 .card {
-    background-color: #f8f9fc;
+    background-color: white;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+    animation: fadeIn 1s ease-in;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -56,11 +67,6 @@ with st.sidebar:
 
 if "alias" not in st.session_state:
     st.session_state.alias = "User-" + str(random.randint(1000, 9999))
-
-st.title("🌿 MindNest")
-st.write(f"Anonymous ID: {st.session_state.alias}")
-st.caption("Your identity is protected. No personal data is stored.")
-
 
 st.markdown("---")
 
