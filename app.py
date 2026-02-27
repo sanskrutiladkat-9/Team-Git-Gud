@@ -131,6 +131,15 @@ div[data-testid="stTextArea"] textarea {
 
 </style>
 """, unsafe_allow_html=True)
+st.markdown("""
+<div class="hero">
+    <h1 style="font-size:50px; margin-bottom:10px;">🌿 MindNest</h1>
+    <h3 style="margin-bottom:15px;">Anonymous, Multilingual Mental Health Support</h3>
+    <p style="font-size:18px;">
+        AI-Augmented Early Intervention • Zero-Trace Privacy • Stepped-Care Escalation
+    </p>
+</div>
+""", unsafe_allow_html=True)
         
 st.markdown("---")
 with st.sidebar:
