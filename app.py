@@ -114,13 +114,13 @@ col1, col2 = st.columns(2)
 with col1:
     mood = st.radio(
         "Select your current state:",
-        [t["Mild"], t["Moderate"]]
+        [t["mild"], t["moderate"]]
     )
 
 with col2:
     mood2 = st.radio(
         " ",
-        [t["Severe"], t["Acute Crisis"]]
+        [t["severe"], t["acute Crisis"]]
          )
 
 mood = mood if mood else mood2
