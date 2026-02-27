@@ -8,15 +8,16 @@ st.title("🌿 MindNest")
 st.write(f"Anonymous ID: {st.session_state.alias}")
 st.caption("Your identity is protected. No personal data is stored.")
 
+
+st.markdown("""
+### Omnichannel AI-Augmented Mental Health Ecosystem  
+Providing anonymous, multilingual early intervention and stepped-care escalation.
+""")
 st.set_page_config(page_title="MindNest", page_icon="🌿")
 language = st.selectbox("Select Language", ["English", "Hindi"])
 
 if language == "Hindi":
     st.write("आप अकेले नहीं हैं। यह एक सुरक्षित स्थान है।")
-st.markdown("""
-### Omnichannel AI-Augmented Mental Health Ecosystem  
-Providing anonymous, multilingual early intervention and stepped-care escalation.
-""")
 
 st.markdown("---")
 
