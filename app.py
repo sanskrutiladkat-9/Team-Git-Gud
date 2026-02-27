@@ -20,6 +20,15 @@ translations = {
         "severe": "गंभीर तनाव",
         "acute": "आपात स्थिति"
     }
+    "Marathi": {
+    "welcome": "गोपनीय बहुभाषिक मानसिक आरोग्य सहाय्य",
+    "mood_question": "आज तुम्हाला कसे वाटत आहे?",
+        "share": "तुमच्या मनातील विचार येथे लिहा...",
+        "mild": "हलका ताण",
+        "moderate": "मध्यम त्रास",
+        "severe": "तीव्र ताण",
+        "acute": "तातडीची परिस्थिती",
+        "select_state": "तुमची सध्याची स्थिती निवडा:"
 }
 
 st.set_page_config(page_title="MindNest", page_icon="🌿", layout = "wide")
@@ -179,7 +188,7 @@ with st.sidebar:
     st.markdown("### Anonymous Support System")
     st.write("Step-Based Mental Health Assistance")
 
-    language = st.selectbox("🌍 Select Language", ["English", "Hindi"])
+    language = st.selectbox("🌍 Select Language", ["English", "Hindi","Marathi"])
     t = translations[language]
 
     st.markdown("---")
