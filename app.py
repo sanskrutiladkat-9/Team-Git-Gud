@@ -1,5 +1,8 @@
 import streamlit as st
 import random
+
+
+st.set_page_config(page_title="MindNest", page_icon="🌿")
 language = st.selectbox("Select Language", ["English", "Hindi"])
 
 if language == "Hindi":
@@ -8,8 +11,6 @@ st.markdown("""
 ### Omnichannel AI-Augmented Mental Health Ecosystem  
 Providing anonymous, multilingual early intervention and stepped-care escalation.
 """)
-
-st.set_page_config(page_title="MindNest", page_icon="🌿")
 
 if "alias" not in st.session_state:
     st.session_state.alias = "User-" + str(random.randint(1000, 9999))
