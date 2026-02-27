@@ -58,7 +58,38 @@ section[data-testid="stSidebar"] * {
     color: #1f2937 !important;
 }
 
+/* ================================
+   SELECTBOX FIX (Force Light Theme)
+================================ */
 
+/* Main selectbox container */
+div[data-baseweb="select"] > div {
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+    border-radius: 10px !important;
+    border: 1px solid #d1d5db !important;
+}
+
+/* Selected value text */
+div[data-baseweb="select"] span {
+    color: #1f2937 !important;
+}
+
+/* Dropdown menu background */
+div[role="listbox"] {
+    background-color: #ffffff !important;
+}
+
+/* Dropdown options */
+div[role="option"] {
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+/* Hover effect */
+div[role="option"]:hover {
+    background-color: #e0f2fe !important;
+}
 /* ================================
    INPUT COMPONENTS
 ================================ */
