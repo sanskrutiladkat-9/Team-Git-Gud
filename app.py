@@ -126,7 +126,7 @@ with col2:
 mood = mood if mood else mood2
 st.markdown("---")
 
-user_input = st.text_area(t["Share"])
+user_input = st.text_area(t["share"])
 
 if user_input:
     risky_words = ["suicide", "kill myself", "end my life", "hopeless", "worthless"]
