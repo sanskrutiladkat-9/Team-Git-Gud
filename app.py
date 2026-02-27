@@ -1,6 +1,9 @@
 import streamlit as st
 import random
+language = st.selectbox("Select Language", ["English", "Hindi"])
 
+if language == "Hindi":
+    st.write("आप अकेले नहीं हैं। यह एक सुरक्षित स्थान है।")
 st.markdown("""
 ### Omnichannel AI-Augmented Mental Health Ecosystem  
 Providing anonymous, multilingual early intervention and stepped-care escalation.
