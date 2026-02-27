@@ -1,12 +1,12 @@
 import streamlit as st
 import random
 
-st.set_page_config(page_title="Aalamban", page_icon="🌿")
+st.set_page_config(page_title="MindNest", page_icon="🌿")
 
 if "alias" not in st.session_state:
     st.session_state.alias = "User-" + str(random.randint(1000, 9999))
 
-st.title("🌿 Aalamban")
+st.title("🌿 MindNest")
 st.write(f"Anonymous ID: {st.session_state.alias}")
 st.caption("Your identity is protected. No personal data is stored.")
 
