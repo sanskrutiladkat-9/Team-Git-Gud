@@ -31,8 +31,17 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
-st.markdown("## 🧠 Welcome to MindNest")
-st.markdown("A Safe, Anonymous Space for Emotional Support")
+
+st.markdown("""
+<div class="hero">
+    <h1 style="font-size:50px; margin-bottom:10px;">🌿 MindNest</h1>
+    <h3 style="margin-bottom:15px;">Anonymous, Multilingual Mental Health Support</h3>
+    <p style="font-size:18px;">
+        AI-Augmented Early Intervention • Zero-Trace Privacy • Stepped-Care Escalation
+    </p>
+</div>
+""", unsafe_allow_html=True)
+        
 st.markdown("---")
 with st.sidebar:
     st.title("🌿 MindNest")
@@ -52,10 +61,9 @@ st.title("🌿 MindNest")
 st.write(f"Anonymous ID: {st.session_state.alias}")
 st.caption("Your identity is protected. No personal data is stored.")
 
-st.set_page_config(page_title="MindNest", page_icon="🌿")
+
 st.markdown("---")
 
-st.subheader("How are you feeling today?")
 st.subheader("How are you feeling today?")
 
 col1, col2 = st.columns(2)
