@@ -25,6 +25,10 @@ translations = {
 st.set_page_config(page_title="MindNest", page_icon="🌿", layout = "wide")
 st.markdown("""
 <style>
+/* Sidebar background override */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #f8fafc, #e0f2fe) !important;
+}
 /* Target Streamlit text area */
 div[data-testid="stTextArea"] textarea {
     color: #1f2937 !important;
