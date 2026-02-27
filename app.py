@@ -92,12 +92,12 @@ st.markdown("""
         
 st.markdown("---")
 with st.sidebar:
-    t = translations[language]
     st.title("🌿 MindNest")
     st.markdown("### Anonymous Support System")
     st.write("Step-Based Mental Health Assistance")
 
     language = st.selectbox("🌍 Select Language", ["English", "Hindi"])
+    t = translations[language]
 
     st.markdown("---")
     st.caption("Emergency Helpline")
