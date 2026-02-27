@@ -1,7 +1,36 @@
 import streamlit as st
 import random
 
-st.set_page_config(page_title="MindNest", page_icon="🌿")
+st.set_page_config(page_title="MindNest", page_icon="🌿", layout = "wide")
+st.markdown("""
+<style>
+/* Banner Styling */
+.hero {
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    padding: 60px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* Smooth Fade In */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Card Styling */
+.card {
+    background-color: #f8f9fc;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+</style>
+""", unsafe_allow_html=True)
 st.markdown("## 🧠 Welcome to MindNest")
 st.markdown("A Safe, Anonymous Space for Emotional Support")
 st.markdown("---")
