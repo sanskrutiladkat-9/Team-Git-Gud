@@ -1,6 +1,21 @@
 import streamlit as st
 import random
 
+st.set_page_config(page_title="MindNest", page_icon="🌿")
+st.markdown("## 🧠 Welcome to MindNest")
+st.markdown("A Safe, Anonymous Space for Emotional Support")
+st.markdown("---")
+with st.sidebar:
+    st.title("🌿 MindNest")
+    st.markdown("### Anonymous Support System")
+    st.write("Step-Based Mental Health Assistance")
+
+    language = st.selectbox("🌍 Select Language", ["English", "Hindi"])
+
+    st.markdown("---")
+    st.caption("Emergency Helpline")
+    st.write("📞 1800-599-0019")
+
 if "alias" not in st.session_state:
     st.session_state.alias = "User-" + str(random.randint(1000, 9999))
 
@@ -8,43 +23,27 @@ st.title("🌿 MindNest")
 st.write(f"Anonymous ID: {st.session_state.alias}")
 st.caption("Your identity is protected. No personal data is stored.")
 
-
-st.markdown("""
-### Omnichannel AI-Augmented Mental Health Ecosystem  
-Providing anonymous, multilingual early intervention and stepped-care escalation.
-""")
 st.set_page_config(page_title="MindNest", page_icon="🌿")
-language = st.selectbox("Select Language", ["English", "Hindi"])
-
-if language == "Hindi":
-    st.write("आप अकेले नहीं हैं। यह एक सुरक्षित स्थान है।")
-
 st.markdown("---")
 
 st.subheader("How are you feeling today?")
+st.subheader("How are you feeling today?")
 
-mood = st.radio(
-    "Select your current state:",
-    ["Mild Stress", "Moderate Distress", "Severe Distress", "Acute Crisis"]
-)
+col1, col2 = st.columns(2)
 
-if mood == "Mild Stress":
-    st.success("🟢 Step 1: AI Self-Guided Support Activated")
-    st.write("• Guided breathing")
-    st.write("• Grounding exercises")
-    st.write("• Psychoeducation modules")
+with col1:
+    mood = st.radio(
+        "Select your current state:",
+        ["Mild Stress", "Moderate Distress"]
+    )
 
-elif mood == "Moderate Distress":
-    st.warning("🟡 Step 2: Peer Support (Barefoot Counselor)")
-    st.write("You can be connected anonymously to a trained volunteer.")
+with col2:
+    mood2 = st.radio(
+        " ",
+        ["Severe Distress", "Acute Crisis"]
+    )
 
-elif mood == "Severe Distress":
-    st.error("🟠 Step 3: Clinical Counseling Recommended")
-    st.write("Escalation to licensed tele-psychologist.")
-
-elif mood == "Acute Crisis":
-    st.error("🔴 Step 4: Emergency Intervention Required")
-    st.write("📞 KIRAN Helpline: 1800-599-0019")
+mood = mood if mood else mood2
 st.markdown("---")
 
 user_input = st.text_area("Share what's on your mind...")
