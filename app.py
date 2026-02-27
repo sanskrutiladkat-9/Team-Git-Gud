@@ -4,6 +4,10 @@ import random
 st.set_page_config(page_title="MindNest", page_icon="🌿", layout = "wide")
 st.markdown("""
 <style>
+/* Force main text color to dark */
+[data-testid="stAppViewContainer"] * {
+    color: #1f2937 !important;
+}
 
 /* Full Page Background Gradient */
 [data-testid="stAppViewContainer"] {
