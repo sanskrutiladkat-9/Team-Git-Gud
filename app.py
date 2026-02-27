@@ -25,11 +25,69 @@ translations = {
 st.set_page_config(page_title="MindNest", page_icon="🌿", layout = "wide")
 st.markdown("""
 <style>
-/* Sidebar background override */
+st.markdown("""
+<style>
+
+/* ================================
+   GLOBAL APP STYLING
+================================ */
+
+/* Full page background */
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #dbeafe, #f0fdf4);
+}
+
+/* Force all text dark */
+[data-testid="stAppViewContainer"] * {
+    color: #1f2937 !important;
+}
+
+/* Remove default header background */
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+
+/* ================================
+   SIDEBAR STYLING
+================================ */
+
 section[data-testid="stSidebar"] {
     background: linear-gradient(180deg, #f8fafc, #e0f2fe) !important;
 }
-/* Target Streamlit text area */
+
+section[data-testid="stSidebar"] * {
+    color: #1f2937 !important;
+}
+
+
+/* ================================
+   INPUT COMPONENTS
+================================ */
+
+/* Selectbox */
+div[data-testid="stSelectbox"] > div {
+    background-color: #ffffff !important;
+    border-radius: 10px !important;
+    border: 1px solid #d1d5db !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
+}
+
+div[data-testid="stSelectbox"] div[role="button"] {
+    color: #1f2937 !important;
+}
+
+ul[role="listbox"] {
+    background-color: white !important;
+    color: #1f2937 !important;
+}
+
+ul[role="listbox"] li:hover {
+    background-color: #e0f2fe !important;
+}
+
+
+/* Text Area */
 div[data-testid="stTextArea"] textarea {
     color: #1f2937 !important;
     background-color: white !important;
@@ -37,61 +95,43 @@ div[data-testid="stTextArea"] textarea {
     border: 1px solid #d1d5db !important;
 }
 
-/* Placeholder styling */
-div[data-testid="stTextArea"] textarea::placeholder {
-    color: #6b7280 !important;
-}
-/* Force main text color to dark */
-[data-testid="stAppViewContainer"] * {
-    color: #1f2937 !important;
-}
 
-/* Full Page Background Gradient */
-[data-testid="stAppViewContainer"] {
-    background: linear-gradient(135deg, #dbeafe, #f0fdf4);
-}
+/* ================================
+   CUSTOM UI COMPONENTS
+================================ */
 
-/* Remove default dark background */
-[data-testid="stHeader"] {
-    background: rgba(0,0,0,0);
-}
-/* Banner Styling */
+/* Banner */
 .hero {
     background: linear-gradient(135deg, #4e73df, #1cc88a);
     padding: 80px;
     border-radius: 20px;
     text-align: center;
-    color: white;
-    margin-bottom: 30px;
+    color: white !important;
+    margin-bottom: 40px;
     animation: fadeIn 1.5s ease-in;
 }
 
-/* Smooth Fade In */
+/* Card */
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+    animation: fadeIn 1s ease-in;
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
 @keyframes fadeIn {
     from {opacity: 0; transform: translateY(-20px);}
     to {opacity: 1; transform: translateY(0);}
 }
 
-/* Card Styling */
-.card {
-    background-color: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    margin-bottom: 25px;
-    animation: fadeIn 1s ease-in;
-}
 </style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<div class="hero">
-    <h1 style="font-size:50px; margin-bottom:10px;">🌿 MindNest</h1>
-    <h3 style="margin-bottom:15px;">Anonymous, Multilingual Mental Health Support</h3>
-    <p style="font-size:18px;">
-        AI-Augmented Early Intervention • Zero-Trace Privacy • Stepped-Care Escalation
-    </p>
-</div>
 """, unsafe_allow_html=True)
         
 st.markdown("---")
