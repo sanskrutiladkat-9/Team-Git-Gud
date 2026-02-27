@@ -1,9 +1,42 @@
 import streamlit as st
 import random
 
+translations = {
+    "English": {
+        "welcome": "Anonymous, Multilingual Mental Health Support",
+        "mood_question": "How are you feeling today?",
+        "share": "Share what's on your mind...",
+        "mild": "Mild Stress",
+        "moderate": "Moderate Distress",
+        "severe": "Severe Distress",
+        "acute": "Acute Crisis"
+    },
+    "Hindi": {
+        "welcome": "गोपनीय बहुभाषी मानसिक स्वास्थ्य सहायता",
+        "mood_question": "आप आज कैसा महसूस कर रहे हैं?",
+        "share": "अपने मन की बात यहाँ लिखें...",
+        "mild": "हल्का तनाव",
+        "moderate": "मध्यम परेशानी",
+        "severe": "गंभीर तनाव",
+        "acute": "आपात स्थिति"
+    }
+}
+
 st.set_page_config(page_title="MindNest", page_icon="🌿", layout = "wide")
 st.markdown("""
 <style>
+/* Target Streamlit text area */
+div[data-testid="stTextArea"] textarea {
+    color: #1f2937 !important;
+    background-color: white !important;
+    border-radius: 10px !important;
+    border: 1px solid #d1d5db !important;
+}
+
+/* Placeholder styling */
+div[data-testid="stTextArea"] textarea::placeholder {
+    color: #6b7280 !important;
+}
 /* Force main text color to dark */
 [data-testid="stAppViewContainer"] * {
     color: #1f2937 !important;
@@ -59,6 +92,7 @@ st.markdown("""
         
 st.markdown("---")
 with st.sidebar:
+    t = translations[language]
     st.title("🌿 MindNest")
     st.markdown("### Anonymous Support System")
     st.write("Step-Based Mental Health Assistance")
@@ -74,26 +108,25 @@ if "alias" not in st.session_state:
 
 st.markdown("---")
 
-st.subheader("How are you feeling today?")
-
+st.subheader(t["mood_question"])
 col1, col2 = st.columns(2)
 
 with col1:
     mood = st.radio(
         "Select your current state:",
-        ["Mild Stress", "Moderate Distress"]
+        [t["Mild"], t["Moderate"]]
     )
 
 with col2:
     mood2 = st.radio(
         " ",
-        ["Severe Distress", "Acute Crisis"]
+        [t["Severe"], [t["Acute Crisis"]]
     )
 
 mood = mood if mood else mood2
 st.markdown("---")
 
-user_input = st.text_area("Share what's on your mind...")
+user_input = st.text_area(t["Share"])
 
 if user_input:
     risky_words = ["suicide", "kill myself", "end my life", "hopeless", "worthless"]
