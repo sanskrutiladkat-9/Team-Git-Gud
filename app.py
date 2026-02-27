@@ -1,6 +1,12 @@
 import streamlit as st
 import random
 
+if "alias" not in st.session_state:
+    st.session_state.alias = "User-" + str(random.randint(1000, 9999))
+
+st.title("🌿 MindNest")
+st.write(f"Anonymous ID: {st.session_state.alias}")
+st.caption("Your identity is protected. No personal data is stored.")
 
 st.set_page_config(page_title="MindNest", page_icon="🌿")
 language = st.selectbox("Select Language", ["English", "Hindi"])
@@ -11,13 +17,6 @@ st.markdown("""
 ### Omnichannel AI-Augmented Mental Health Ecosystem  
 Providing anonymous, multilingual early intervention and stepped-care escalation.
 """)
-
-if "alias" not in st.session_state:
-    st.session_state.alias = "User-" + str(random.randint(1000, 9999))
-
-st.title("🌿 MindNest")
-st.write(f"Anonymous ID: {st.session_state.alias}")
-st.caption("Your identity is protected. No personal data is stored.")
 
 st.markdown("---")
 
